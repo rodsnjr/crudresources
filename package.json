@@ -1,6 +1,6 @@
 {
   "name": "crudresources",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a simple crud resources generator using expressjs",
   "main": "index.js",
   "scripts": {
