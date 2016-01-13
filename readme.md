@@ -11,7 +11,7 @@ The common routes:
 # Create a Crud Route #
 Creating a simple route for managing products. The default *Model engine* it's [SequelizeJS](http://docs.sequelizejs.com/en/latest/)
 ```javascript
-var crudresource = require('crudresource');
+var crudresource = require('crudresources');
 
 var products = crudresource({
     model : Product,
