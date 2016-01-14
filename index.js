@@ -1,4 +1,5 @@
 var sequelizeRouter = require('./libs/sequelize');
+var mongooseRouter = require('./libs/mongoose');
 /**
 * Swap empty undefined events with a default action
 * @param {args} args The arguments object
@@ -29,6 +30,8 @@ module.exports = (function(args){
         //Currently Accepting sequelize as ORM
         if (args.engine == 'sequelize') {
             return sequelizeRouter(args);
+        }else if (args.engine == 'mongoose'){
+            return mongooseRouter(args);
         }
         //Else for default a value
         else {

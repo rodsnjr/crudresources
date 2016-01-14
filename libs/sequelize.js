@@ -13,7 +13,7 @@ module.exports = (function(args){
          router.get('/', function(req, res){
              if (args.onQuery(req.body)){
                 model.findAll(req.body).then(function(all){
-                    res.send(all);
+                    res.json(all);
                 });
              }
          });
@@ -21,7 +21,7 @@ module.exports = (function(args){
          router.get('/:id', function(req, res){
              if (args.onFind(req.body)){
                 model.findById(req.params.id).then(function(one){
-                    res.send(one);
+                    res.json(one);
                 });    
              }             
          });
@@ -30,7 +30,7 @@ module.exports = (function(args){
              if (args.onUpdate(req.body)){
                 model.findById(req.params.id).then(function(one){
                     one.update(req.body).then(function(updated){
-                        res.send(updated);
+                        res.json(updated);
                     });
                 });
              }
@@ -46,7 +46,7 @@ module.exports = (function(args){
                 model.findById(req.params.id).then(function(one){
                 one.destroy()
                     .then(function(destroyed){
-                        res.send(destroyed);
+                        res.json(destroyed);
                     });
                 });
                 
@@ -57,7 +57,7 @@ module.exports = (function(args){
          router.post('/', function(req, res){
             if (args.onCreate(req.body)){
                 model.build(req.body).save().then(function(product){
-                    res.send(product);
+                    res.json(product);
                 }).catch(function(error){
                     res.send(error);
                 });    
