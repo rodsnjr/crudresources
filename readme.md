@@ -8,6 +8,10 @@ The common routes:
 * PUT or PATCH /:id for updating an object
 * DELETE /:id for deleting an object
 
+# Required Libs #
+* ExpressJS
+* Body-parser
+
 # Create a Crud Route #
 Creating a simple route for managing products. The default *Model engine* it's [SequelizeJS](http://docs.sequelizejs.com/en/latest/)
 ```javascript
